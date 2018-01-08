@@ -8,8 +8,28 @@ const bot = new Discord.Client();
 
 client.on("ready", () => {
   console.log("Je suis en ligne !");
-  client.user.setGame("être un bot en charlie !");
-});
+  client.user.setGame("utilisez !help");
+  var channel = client.channels.get('398844230014992386');
+  channel.sendMessage({embed: {
+    color: 16558459,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "__Mise à jour du bot:__",
+    description: "Le bot a était mis à jour le **08/01/2018**.",
+    fields: [{
+      name: "__Les rajouts:__",
+      value: "-Ajout de messages lorsque les mots **forum**, **vote**, **problème**, **bug**, **candidature**, **site non installé** sont prononcés.",
+    }],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "Envoyé"
+    }
+  }
+  })
+}); 
 
 client.on("message", (message) => {
   if (message.author.bot) return;
@@ -36,11 +56,30 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
   if (message.author.bot) return;
+  if (message.content.includes("site non installé")) {
+  message.channel.sendMessage("Pas de soucis ! Clic ici -> http://154.49.213.18/");
+  }
+});
+
+client.on("message", (message) => {
+  if (message.author.bot) return;
+  if (message.content.includes("problème") ||
+  message.content.includes("problèmes") ||
+  message.content.includes("problemes") ||
+  message.content.includes("bug") ||
+  message.content.includes("bugs") ||
+  message.content.includes("probleme")) {
+  message.channel.sendMessage("Un bug sur le serveur ? Pas de soucis, rend toi sur #report-bug");
+  }
+});
+
+client.on("message", (message) => {
+  if (message.author.bot) return;
   if (message.content.includes("vote") || 
   message.content.includes("votes") ||
   message.content.includes("voter") ||
   message.content.includes("voté")) {
-  message.channel.sendMessage("Envie de soutenir notre serveur ? Alors vote pour lui -> https://www.trackyserver.com/server/new-cr4zzy-city-29894 ");
+  message.channel.sendMessage("Envie de soutenir notre serveur ? Alors vote pour lui -> https://www.trackyserver.com/server/new-cr4zzy-city-29894");
   }
 });
 
@@ -98,6 +137,28 @@ if (message.content.startsWith(config.prefix +'vote')) {
     },
     title: "Vote pour le serveur !",
     description: "Pour qu'il y est plus de monde sur le serveur et pour nous aidez à le faire connaître, [vote](https://www.trackyserver.com/server/new-cr4zzy-city-29894) maintenant !",
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "Envoyé"
+    }
+  }
+  })
+};
+
+if (message.content.startsWith(config.prefix +'update')) {
+  message.channel.send({embed: {
+    color: 16558459,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "__Mise à jour du bot:__",
+    description: "Le bot a était mis à jour le **07/01/2018**.",
+    fields: [{
+      name: "__Les rajouts:__",
+      value: "-Add des messages lorsque les mots **forum**, **vote**, **problème**, **bug**, **candidature**, ",
+    }],
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
@@ -227,6 +288,7 @@ if (message.content.startsWith(config.prefix + 'version')) {
   })
 };
 });
+
 
 //client.on("message", (message) => {
 //  if (message.content.startsWith(config.prefix + "kick")) {
