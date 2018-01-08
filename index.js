@@ -9,7 +9,7 @@ const bot = new Discord.Client();
 client.on("ready", () => {
   console.log("Je suis en ligne !");
   client.user.setGame("utilisez !help");
-  var channel = client.channels.get('398844230014992386');
+  var channel = client.channels.get('377470950951747595');
   channel.sendMessage({embed: {
     color: 16558459,
     author: {
