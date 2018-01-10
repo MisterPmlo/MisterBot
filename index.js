@@ -6,9 +6,9 @@ const bot = new Discord.Client();
 
 
 
-//client.on("ready", () => {
- // console.log("Je suis en ligne !");
- // client.user.setGame("utilisez !help");
+client.on("ready", () => {
+  console.log("Je suis en ligne !");
+ client.user.setGame("utilisez !help");
   //var channel = client.channels.get('377470950951747595');
   //channel.sendMessage({embed: {
     //color: 16558459,
@@ -29,7 +29,7 @@ const bot = new Discord.Client();
  //   }
  // }
   //})
-//}); 
+}); 
 
 client.on("message", (message) => {
   if (message.author.bot) return;
@@ -256,7 +256,7 @@ if (message.content.startsWith(config.prefix + 'version')) {
       icon_url: client.user.avatarURL
     },
     title: "__Version du bot:__",
-    description: "Le bot est en version **0.0.2** (en développement), si vous rencontrez des bugs, merci de me les dire en mp",
+    description: "Le bot est en version **0.0.3** (en développement), si vous rencontrez des bugs, merci de me les dire en mp",
     fields: [{
       name: "__Créateur:__",
       value: "MisterPmlo (Paul Origeon)",
