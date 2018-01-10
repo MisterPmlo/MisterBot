@@ -41,14 +41,6 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
   if (message.author.bot) return;
-  if (message.content.includes("ip") || 
-  message.content.includes("IP")) {
-  message.channel.sendMessage("L'ip est -> 154.25.25.25");
-  }
-});
-
-client.on("message", (message) => {
-  if (message.author.bot) return;
   if (message.content.includes("règles") || 
   message.content.includes("règle")){
   message.channel.sendMessage("Nos règles ce trouvent ici -> https://goo.gl/N6RnhQ");
