@@ -9,26 +9,26 @@ const bot = new Discord.Client();
 client.on("ready", () => {
   console.log("Je suis en ligne !");
  client.user.setGame("utilisez !help");
-  //var channel = client.channels.get('377470950951747595');
-  //channel.sendMessage({embed: {
-    //color: 16558459,
-   // author: {
- //     name: client.user.username,
-//      icon_url: client.user.avatarURL
- //   },
-  //  title: "__Mise à jour du bot:__",
- //   description: "Le bot a était mis à jour le **08/01/2018**.",
-  //  fields: [{
- //     name: "__Les rajouts:__",
-//      value: "-Ajout de messages lorsque les mots **forum**, **vote**, **problème**, **bug**, **candidature**, **site non installé** sont prononcés.",
-//    }],
- //   timestamp: new Date(),
- //   footer: {
- //     icon_url: client.user.avatarURL,
- //     text: "Envoyé"
- //   }
- // }
-  //})
+  var channel = client.channels.get('377470950951747595');
+  channel.sendMessage({embed: {
+    color: 16558459,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "__Mise à jour du bot:__",
+    description: "Le bot a était mis à jour le **08/01/2018**.",
+    fields: [{
+      name: "__Les rajouts:__",
+      value: "-Ajout d'une nouvelle commande !nb !!!",
+    }],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "Envoyé"
+    }
+  }
+  })
 }); 
 
 client.on("message", (message) => {
@@ -127,6 +127,10 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
   }
   })
 };
+  
+if (message.content.startsWith(config.prefix + 'nb')) {
+  message.channel.sendMessage('https://www.trackyserver.com/banner/29894/default/FFFFFF/FFFFFF')
+}else
 
 if (message.content.startsWith(config.prefix +'vote')) {
   message.channel.send({embed: {
