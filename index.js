@@ -293,4 +293,4 @@ if (message.content.startsWith(config.prefix + 'version')) {
 //};
 //});
 
-client.login(config.token)
+client.login(process.env.TOKEN)
