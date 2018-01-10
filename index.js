@@ -8,25 +8,25 @@ const bot = new Discord.Client();
 
 client.on("ready", () => {
   console.log("Je suis en ligne !");
- client.user.setGame("utilisez !help");
+  client.user.setGame("utilisez !help");
   var channel = client.channels.get('377470950951747595');
   channel.sendMessage({embed: {
-    color: 16558459,
+    color: 65304,
     author: {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
     title: "__Mise à jour du bot:__",
-    description: "Le bot a était mis à jour le **10/01/2018**.",
+    description: "Le bot a était mis à jour le **08/01/2018**.",
     fields: [{
       name: "__Les rajouts:__",
-      value: "-Ajout d'une nouvelle commande !server (**Il faut cliquer sur l'image pour actualiser**).",
+      value: "-Ajout de la nouvelle commande !server (**Il faut cliquer sur l'image pour actualiser**)",
     }],
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
       text: "Envoyé"
-    }
+        }
   }
   })
 }); 
@@ -36,6 +36,14 @@ client.on("message", (message) => {
   if (message.content.includes("candidature") || 
   message.content.includes("candid")) {
   message.channel.sendMessage("Allez faire votre candidature ici -> http://cr4zzy.fr/forum/13/gtav-rp ");
+  }
+});
+
+client.on("message", (message) => {
+  if (message.author.bot) return;
+  if (message.content.includes("ip") || 
+  message.content.includes("IP")) {
+  message.channel.sendMessage("L'ip est -> 154.25.25.25");
   }
 });
 
@@ -127,10 +135,6 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
   }
   })
 };
-  
-if (message.content.startsWith(config.prefix + 'server')) {
-  message.channel.sendMessage("Voici l'état du serveur et le nombre de joueurs connectés en ce moment (**Clic sur l'image pour quelle s'actualise**): https://www.trackyserver.com/banner/29894/default/ffffff/ffffff.png")
-}else
 
 if (message.content.startsWith(config.prefix +'vote')) {
   message.channel.send({embed: {
@@ -150,27 +154,9 @@ if (message.content.startsWith(config.prefix +'vote')) {
   })
 };
 
-if (message.content.startsWith(config.prefix +'update')) {
-  message.channel.send({embed: {
-    color: 16558459,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "__Mise à jour du bot:__",
-    description: "Le bot a était mis à jour le **07/01/2018**.",
-    fields: [{
-      name: "__Les rajouts:__",
-      value: "-Add des messages lorsque les mots **forum**, **vote**, **problème**, **bug**, **candidature**, ",
-    }],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "Envoyé"
-    }
-  }
-  })
-}; 
+if (message.content.startsWith(config.prefix + 'server')) {
+  message.channel.sendMessage("Voici l'état du serveur et le nombre de joueurs connectés en ce moment: https://www.trackyserver.com/banner/29894/default/ffffff/ffffff.png")
+}else
 
 if (message.content.startsWith(config.prefix + 'forum')) {
   message.channel.send({embed: {
@@ -234,7 +220,7 @@ if (message.content.startsWith(config.prefix + 'help')) {
       icon_url: client.user.avatarURL
     },
     title: "__Liste de nos commandes:__",
-    description: "  **version** \n **regles** \n **forum** \n **site** \n **debugsite** \n **candidature** \n **vote** \n **stream**" \n **server**,
+    description: "  **version** \n **regles** \n **forum** \n **site** \n **debugsite** \n **candidature** \n **vote** \n **stream** \n **server**",
     fields: [{
       name: "__Commandes Admins:__",
       value: "**prefix** \n **kick** (retirée pour l'instant)",
@@ -260,7 +246,7 @@ if (message.content.startsWith(config.prefix + 'version')) {
       icon_url: client.user.avatarURL
     },
     title: "__Version du bot:__",
-    description: "Le bot est en version **0.0.3** (en développement), si vous rencontrez des bugs, merci de me les dire en mp",
+    description: "Le bot est en version **0.0.2** (en développement), si vous rencontrez des bugs, merci de me les dire en mp",
     fields: [{
       name: "__Créateur:__",
       value: "MisterPmlo (Paul Origeon)",
@@ -307,4 +293,4 @@ if (message.content.startsWith(config.prefix + 'version')) {
 //};
 //});
 
-client.login(process.env.TOKEN)
+client.login(config.token)
