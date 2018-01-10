@@ -9,26 +9,26 @@ const bot = new Discord.Client();
 client.on("ready", () => {
   console.log("Je suis en ligne !");
   client.user.setGame("utilisez !help");
-  var channel = client.channels.get('377470950951747595');
-  channel.sendMessage({embed: {
-    color: 65304,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "__Mise à jour du bot:__",
-    description: "Le bot a était mis à jour le **08/01/2018**.",
-    fields: [{
-      name: "__Les rajouts:__",
-      value: "-Ajout de la nouvelle commande !server (**Il faut cliquer sur l'image pour actualiser**)",
-    }],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "Envoyé"
-        }
-  }
-  })
+ // var channel = client.channels.get('377470950951747595');
+//  channel.sendMessage({embed: {
+//    color: 65304,
+//    author: {
+//      name: client.user.username,
+//      icon_url: client.user.avatarURL
+//    },
+ //   title: "__Mise à jour du bot:__",
+ //   description: "Le bot a était mis à jour le **08/01/2018**.",
+ //   fields: [{
+   //   name: "__Les rajouts:__",
+  //    value: "-Ajout de la nouvelle commande !server (**Il faut cliquer sur l'image pour actualiser**)",
+  //  }],
+   // timestamp: new Date(),
+   // footer: {
+   //   icon_url: client.user.avatarURL,
+   //   text: "Envoyé"
+  //      }
+ // }
+ // })
 }); 
 
 client.on("message", (message) => {
@@ -155,7 +155,7 @@ if (message.content.startsWith(config.prefix +'vote')) {
 };
 
 if (message.content.startsWith(config.prefix + 'server')) {
-  message.channel.sendMessage("Voici l'état du serveur et le nombre de joueurs connectés en ce moment: https://www.trackyserver.com/banner/29894/default/ffffff/ffffff.png")
+  message.channel.sendMessage("Voici l'état du serveur et le nombre de joueurs connectés en ce moment (**Il faut cliquer sur l'image pour actualiser**): https://www.trackyserver.com/banner/29894/default/ffffff/ffffff.png")
 }else
 
 if (message.content.startsWith(config.prefix + 'forum')) {
