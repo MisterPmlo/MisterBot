@@ -39,6 +39,14 @@ client.on("message", (message) => {
   }
 });
 
+
+client.on("message", (message) => {
+  if (message.author.bot) return;
+  message.content.includes("trello")) {
+  message.channel.sendMessage("Si tu veux suivre l'avancement du trello ou même participer, voici où ça se passe -> https://trello.com/b/uyN0zODm/cr4zzy-rp");
+  }
+});
+
 client.on("message", (message) => {
   if (message.author.bot) return;
   if (message.content.includes("règles") || 
