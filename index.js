@@ -18,7 +18,7 @@ client.on("ready", () => {
     },
     title: "__Mise à jour du bot:__",
     description: "Le bot a était mis à jour le **12/01/2018**.",
- /   fields: [{
+    fields: [{
       name: "__Les rajouts:__",
       value: "Si la commande !forum ou !vote est écrite, il n'y a plus deux fois le même message :)",
     }],
