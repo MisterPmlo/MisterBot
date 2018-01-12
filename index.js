@@ -9,26 +9,26 @@ const bot = new Discord.Client();
 client.on("ready", () => {
   console.log("Je suis en ligne !");
   client.user.setGame("utilisez !help");
-  var channel = client.channels.get('377470950951747595');
-  channel.sendMessage({embed: {
-    color: 65304,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "__Mise à jour du bot:__",
-    description: "Le bot a était mis à jour le **12/01/2018**.",
-    fields: [{
-      name: "__Les rajouts:__",
-      value: "Si la commande !forum ou !vote est écrite, il n'y a plus deux fois le même message :)",
-    }],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "Envoyé"
-        }
-  }
-  })
+//  var channel = client.channels.get('377470950951747595');
+ // channel.sendMessage({embed: {
+//    color: 65304,
+//    author: {
+//      name: client.user.username,
+//      icon_url: client.user.avatarURL
+//    },
+//    title: "__Mise à jour du bot:__",
+//    description: "Le bot a était mis à jour le **12/01/2018**.",
+//    fields: [{
+//      name: "__Les rajouts:__",
+//      value: "Si la commande !forum ou !vote est écrite, il n'y a plus deux fois le même message :)",
+//    }],
+//    timestamp: new Date(),
+//    footer: {
+//      icon_url: client.user.avatarURL,
+//      text: "Envoyé"
+//        }
+//  }
+//  })
 }); 
 
 client.on("message", (message) => {
