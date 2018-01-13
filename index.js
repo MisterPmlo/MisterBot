@@ -157,7 +157,7 @@ if (message.content.startsWith(config.prefix +'vote')) {
 };
 
 if (message.content.startsWith(config.prefix + 'server')) {
-  message.channel.sendMessage("Voici l'état du serveur et le nombre de joueurs connectés en ce moment: http://154.49.213.18/upload/img/ffffff.png")
+  message.channel.sendMessage("Voici l'état du serveur et le nombre de joueurs connectés en ce moment: http://154.49.213.18/upload/img/bannerGTA.png")
 }else
 
 if (message.content.startsWith(config.prefix + 'forum')) {
