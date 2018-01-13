@@ -65,7 +65,9 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
   if (message.author.bot) return;
-  if (message.content.includes("site non installé")) {
+  if (message.content.includes('"site non installé"') ||
+  message.content.includes('"site non installe"') ||
+  message.content.includes ("site non installé")) {
   message.channel.sendMessage("Pas de soucis ! Clic ici -> http://154.49.213.18/");
   }
 });
