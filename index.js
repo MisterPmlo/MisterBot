@@ -59,6 +59,7 @@ client.on("message", (message) => {
 client.on("message", (message) => {
   if (message.author.bot) return;
   if (message.content.includes("!forum")) return message.channel.sendMessage("");
+  if (message.content.includes("!forumhs")) return message.channel.sendMessage("");
   if (message.content.includes("forum")) {
   message.channel.sendMessage("Envie de faire un tour sur notre forum -> http://cr4zzy.fr/forum");
   }
