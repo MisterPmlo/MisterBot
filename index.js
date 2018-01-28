@@ -44,7 +44,7 @@ client.on("message", (message) => {
   if (message.author.bot) return;
   if (message.content.includes("Trello") ||
   message.content.includes("trello")) {
-  message.channel.sendMessage("Si tu veux suivre l'avancement du trello ou même participer, voici où ça se passe -> https://trello.com/b/uyN0zODm/cr4zzy-rp");
+  message.channel.sendMessage("Si tu veux suivre l'avancement du trello ou même participer, voici où ça se passe -> https://trello.com/b/uyN0zODm/cr4zzy-rp et https://trello.com/b/d5kZl7Vk/cr4zzy-dev");
   }
 });
 
