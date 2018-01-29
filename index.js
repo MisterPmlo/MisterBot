@@ -69,7 +69,7 @@ if (message.content.startsWith(config.prefix + 'help')) {
               description: "Tout d'abord, pour faire votre candidature, il vous faut avoir lu les [règles](https://forum.summer-island.fr/threads/reglement-a-lire.10/).",
               fields: [{
                   name: "Candidature",
-                  value: "Après avoir lu les règles, faite votre [candidature](http://cr4zzy.fr/forum/13/gtav-rp)."
+                  value: "Après avoir lu les règles, faite votre [candidature](https://forum.summer-island.fr/forums/rejoindre-lile.32/)."
                 },
                 {
                   name: "Candidature acceptée",
@@ -217,7 +217,7 @@ if (message.content.includes("bug") ||
 if (message.author.bot) return;
 if (message.content.includes("candidature") || 
 message.content.includes("candid")) {
-message.channel.sendMessage("Allez faire votre candidature ici -> https://forum.summer-island.fr/");
+message.channel.sendMessage("Allez faire votre candidature ici -> https://forum.summer-island.fr/forums/rejoindre-lile.32/");
 }
 
 //============================REGLES CHAT===========================
