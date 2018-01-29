@@ -259,4 +259,4 @@ message.channel.send({embed: {
 };
 
 });
-client.login(config.token)
+client.login(process.env.TOKEN)
