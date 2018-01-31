@@ -185,7 +185,7 @@ if (message.content.startsWith(config.prefix +'vote')) {
         icon_url: client.user.avatarURL
       },
       title: "Vote pour le serveur !",
-      description: "Pour qu'il y est plus de monde sur le serveur et pour nous aider à le faire connaître, [vote](https://www.trackyserver.com/server/new-cr4zzy-city-29894) maintenant !",
+      description: "Pour qu'il y ait plus de monde sur le serveur et pour nous aider à le faire connaître, [vote](https://gta.top-serveurs.net/vote/summer-island) toutes les 2 heures et donne nous ton [avis](https://gta.top-serveurs.net/summer-island/advices) !",
       timestamp: new Date(),
       footer: {
         icon_url: client.user.avatarURL,
@@ -202,8 +202,22 @@ if (message.content.startsWith(config.prefix +'vote')) {
     message.content.includes("votes") ||
     message.content.includes("voter") ||
     message.content.includes("voté")) {
-    message.channel.sendMessage("Envie de soutenir notre serveur ? Alors vote pour lui -> https://www.trackyserver.com/server/new-cr4zzy-city-29894");
-}
+      message.channel.send({embed: {
+        color: 16098851,
+        author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+        },
+        title: "Vote pour le serveur !",
+        description: "Pour qu'il y ait plus de monde sur le serveur et pour nous aider à le faire connaître, [vote](https://gta.top-serveurs.net/vote/summer-island) toutes les 2 heures et donne nous ton [avis](https://gta.top-serveurs.net/summer-island/advices) !",
+        timestamp: new Date(),
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: "Envoyé"
+        }
+      }
+      })
+    };  
 
 //============================BUG CHAT=============================
 if (message.author.bot) return;
