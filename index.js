@@ -6,26 +6,26 @@ const fs = require("fs");
 client.on("ready", () => {
     console.log("Je suis en ligne !");
     client.user.setGame("utilisez !help");
-//    var channel = client.channels.get('407188493006143488');
-//    channel.sendMessage({embed: {
-//      color: 65304,
-//      author: {
-//        name: client.user.username,
-//        icon_url: client.user.avatarURL
-//      },
-//      title: "__Mise à jour du bot:__",
-//      description: "Le bot a était mis à jour le **29/01/2018**.",
-//      fields: [{
-//        name: "__Les rajouts:__",
-//        value: "MisterBot est de retour ! Optimisation des commandes ! Et pleins de nouvelles choses vont bientôt arriver !",
-//      }],
-//      timestamp: new Date(),
-//      footer: {
-//        icon_url: client.user.avatarURL,
-//        text: "Envoyé"
-//          }
-//    }
-//    })
+    var channel = client.channels.get('407188493006143488');
+    channel.sendMessage({embed: {
+      color: 65304,
+      author: {
+        name: client.user.username,
+        icon_url: client.user.avatarURL
+      },
+      title: "__Mise à jour du bot:__",
+      description: "Le bot a était mis à jour le **31/01/2018**.",
+      fields: [{
+        name: "__Les rajouts:__",
+        value: "Une suggestion à faire ? Le channel Referundum est arrivé avec un moyen de voter ! Alors dépéchez vous !",
+      }],
+      timestamp: new Date(),
+      footer: {
+        icon_url: client.user.avatarURL,
+        text: "Envoyé"
+          }
+    }
+    })
   });
 client.on("message", (message) => {
 
