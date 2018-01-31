@@ -275,7 +275,7 @@ message.channel.send({embed: {
 //============================IP==================================
 
 if (message.content.startsWith(config.prefix + "ip")) {
-  if(!message.member.hasPermission('ADMINISTRATOR' || 'MANAGE_ROLES')) return message.channel.send(":no_entry: Vous n'avez pas la permission d'utiliser cette commande");{
+  if(!message.member.hasPermissions('MANAGE_ROLES' || 'ADMINISTRATOR')) return message.channel.send(":no_entry: Vous n'avez pas la permission d'utiliser cette commande");{
   var member= message.mentions.members.first();
   member.setMute().then((member) => {
   member.sendMessage("Ip du serveur wl -> ``164.132.69.252:6969`` Et avec le F8 -> ``connect 164.132.69.252:6969``");
