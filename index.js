@@ -26,7 +26,7 @@ client.on("ready", () => {
 //          }
 //    }
 //    })
-//  });
+});
 client.on("message", (message) => {
 
   //============================HELP===============================
@@ -300,5 +300,6 @@ if (message.content.startsWith(config.prefix + "ip")) {
 };
 };
 });
+
 
 client.login(process.env.TOKEN)
