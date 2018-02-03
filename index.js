@@ -275,17 +275,17 @@ message.channel.send({embed: {
 //============================SUGGESTION==================================
 
 client.on('message', (message) => {
-  var channel = client.channels.get('408006716832219146');
-  if(message.channel != channel) return message.channel.send("")
-  if (message.author.bot) return;
-   message.delete()
-channel.send(`:speaking_head: ***REFERUNDUM @everyone ! :speaking_head:*** \n ${message.content} \n **Proposé par ${message.member}**`)
-            .then(function (message) {
-              message.react("👍")
-              message.react("👎")
-            }).catch(function() {
-            })
-            });
+//  var channel = client.channels.get('408006716832219146');
+//  if(message.channel != channel) return message.channel.send("")
+//  if (message.author.bot) return;
+//   message.delete()
+//channel.send(`:speaking_head: ***REFERUNDUM @everyone ! :speaking_head:*** \n ${message.content} \n **Proposé par ${message.member}**`)
+  //          .then(function (message) {
+  //            message.react("👍")
+  //            message.react("👎")
+  //          }).catch(function() {
+   //         })
+   //         });
     
 //============================IP==================================
 
