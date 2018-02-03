@@ -300,7 +300,7 @@ if (message.content.startsWith(config.prefix + "ip")) {
 });
 };
 };
-});
-
-
-client.login(process.env.TOKEN)
+    };
+}); 
+client . login ( processus : env . TOKEN )
+    
