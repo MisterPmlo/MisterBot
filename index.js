@@ -299,7 +299,7 @@ if (message.content.startsWith(config.prefix + "ip")) {
     message.channel.send("");
 });
 };
-};
+});
     });
 }); 
 client . login ( processus : env . TOKEN )
