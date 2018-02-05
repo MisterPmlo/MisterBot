@@ -44,25 +44,25 @@ var nbPlayers = -1;
 client.on("ready", () => {
     console.log("Je suis en ligne !");
     client.user.setGame("utilisez !help");
-    var channel = client.channels.get('407188493006143488');
-    channel.sendMessage({embed: {
-      color: 65304,
-      author: {
-        name: client.user.username,
-        icon_url: client.user.avatarURL
-      },
-      title: "__Mise à jour du bot:__",
-      description: "Le bot a était mis à jour le **5/02/2018**.",
-      fields: [{
-        name: "__Les rajouts:__",
-        value: "MisterBot is **BACK** ! Attention les yeux y'a du lourd ! Le nombre de joueurs sur le serveur ce change tout seul dans le salon <#410127276991184906> ! Mais maintenant il y'a aussi l'automatisation des roles entre GTA et discord ! (Changement des roles IG = changement des roles discord !) :yum:",
-      }],
-      timestamp: new Date(),
-      footer: {
-        icon_url: client.user.avatarURL,
-        text: "Envoyé"
-          }
-    }
+   // var channel = client.channels.get('407188493006143488');
+   // channel.sendMessage({embed: {
+   //   color: 65304,
+   //   author: {
+   //     name: client.user.username,
+   //     icon_url: client.user.avatarURL
+   //   },
+   //   title: "__Mise à jour du bot:__",
+   //   description: "Le bot a était mis à jour le **5/02/2018**.",
+   //   fields: [{
+   //     name: "__Les rajouts:__",
+   //     value: "MisterBot is **BACK** ! Attention les yeux y'a du lourd ! Le nombre de joueurs sur le serveur ce change tout seul dans le salon <#410127276991184906> ! Mais maintenant il y'a aussi l'automatisation des roles entre GTA et discord ! (Changement des roles IG = changement des roles discord !) :yum:",
+   //   }],
+   //   timestamp: new Date(),
+   //   footer: {
+   //     icon_url: client.user.avatarURL,
+   //     text: "Envoyé"
+   //       }
+   // }
     })
   printPlayersOnline();
   setInterval(printPlayersOnline, 60000);
