@@ -14,7 +14,7 @@ var listJobsAlias = [
   {gta : 'unemployed', discord : 'Chômeur💼'},
   {gta : 'taxi', discord : 'Taxi🚖'},
   {gta : 'fisher', discord : 'Pêcheur🎣'},
-  {gta : 'slaughter', discord : 'Abatteur🐓'},
+  {gta : 'slaughterer', discord : 'Abatteur🐓'},
   {gta : 'unicorn', discord : 'Unicorn🦄'},
   {gta : 'fuel', discord : 'Raffineur⛽'},
   {gta : 'banker', discord : 'Banquier🏦'},
