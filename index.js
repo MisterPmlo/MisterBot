@@ -304,5 +304,5 @@ if (message.content.startsWith(config.prefix + "ip")) {
     });
 }); 
 });
-client . login ( processus : env . TOKEN )
+client.login (process.env.TOKEN)
     
