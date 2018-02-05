@@ -299,6 +299,7 @@ message.channel.sendMessage("Envie de faire un tour sur notre forum -> https://f
 //============================TRELLO CHAT===========================
 
 if (message.author.bot) return;
+if (message.content.includes("trello.com")) return message.channel.sendMessage("");
 if (message.content.includes("Trello") ||
 message.content.includes("trello")) {
 message.channel.send({embed: {
