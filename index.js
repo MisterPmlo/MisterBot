@@ -63,7 +63,7 @@ client.on("ready", () => {
    //     text: "Envoyé"
    //       }
    // }
-    })
+   // })
   printPlayersOnline();
   setInterval(printPlayersOnline, 60000);
 
