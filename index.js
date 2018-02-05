@@ -298,11 +298,6 @@ if (message.content.startsWith(config.prefix + "ip")) {
   }).catch(() => {
     message.channel.send("");
 });
-};
-};
-    });
-    });
-}); 
-});
+
 client.login (process.env.TOKEN)
     
