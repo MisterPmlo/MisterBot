@@ -672,4 +672,4 @@ function deleteAllMessages(channel) {
 }
 
 
-client.login(process.env.TOKEN)
+client.l)
